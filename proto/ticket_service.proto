@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "github.com/silent-observer/go-tickets/proto/tickets";
+
+package tickets;
+
+import "ticket_full_id.proto";
+import "ticket.proto";
+
+service TicketService {
+    rpc Get(TicketFullId) returns (Ticket);
+    rpc Create(Ticket) returns (TicketFullId);
+    rpc Edit(Ticket) returns (Ticket);
+}

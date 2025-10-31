@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "github.com/silent-observer/go-tickets/proto/tickets";
+
+package tickets;
+
+enum TicketLinkType {
+    TLT_RELATED = 0;
+    TLT_DUPLICATE = 1;
+    TLT_PARENT = 2;
+    TLT_CHILD = 3;
+    TLT_BLOCKS = 4;
+    TLT_DEPENDS_ON = 5;
+}

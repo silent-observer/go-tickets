@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "github.com/silent-observer/go-tickets/proto/tickets";
+
+package tickets;
+
+import "file_info.proto";
+import "user_id.proto";
+
+message UserShort {
+    optional UserId id = 1;
+    optional string username = 2;
+    optional FileInfo profile_picture = 3;
+}

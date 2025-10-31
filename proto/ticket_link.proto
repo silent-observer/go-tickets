@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "github.com/silent-observer/go-tickets/proto/tickets";
+
+package tickets;
+
+import "ticket_id.proto";
+import "ticket_link_type.proto";
+
+message TicketLink {
+    TicketLinkType type = 1;
+    TicketId ticket = 2;
+}

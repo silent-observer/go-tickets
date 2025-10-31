@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "github.com/silent-observer/go-tickets/proto/tickets";
+
+package tickets;
+
+import "board_full_id.proto";
+import "ticket_short.proto";
+
+message Board {
+    optional BoardFullId id = 1;
+    optional string name = 2;
+    repeated TicketShort tickets = 3;
+}

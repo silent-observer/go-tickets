@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option go_package = "github.com/silent-observer/go-tickets/proto/tickets";
+
+package tickets;
+
+import "board_full_id.proto";
+import "board_sort.proto";
+import "ticket_tag.proto";
+import "ticket_link.proto";
+import "user_id.proto";
+
+message BoardFilter {
+    optional BoardFullId id = 1;
+    repeated UserId created_by = 2;
+    repeated UserId assigned_to = 3;
+    repeated TicketTag tags = 4;
+    repeated TicketLink links = 5;
+    repeated string status = 6;
+    repeated BoardSort sort = 7;
+}

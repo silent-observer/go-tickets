@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option go_package = "github.com/silent-observer/go-tickets/proto/tickets";
+
+package tickets;
+
+message UserId {
+    uint64 id = 1;
+}

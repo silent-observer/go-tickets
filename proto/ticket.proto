@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option go_package = "github.com/silent-observer/go-tickets/proto/tickets";
+
+package tickets;
+
+import "google/protobuf/timestamp.proto";
+
+import "board_id.proto";
+import "file_info.proto";
+import "ticket_full_id.proto";
+import "ticket_link.proto";
+import "ticket_tag.proto";
+import "user_short.proto";
+
+message Ticket {
+    optional TicketFullId id = 1;
+    optional string title = 2;
+    optional string content = 3;
+    repeated TicketLink links = 4;
+    repeated TicketTag tags = 5;
+    optional string status = 6;
+    optional google.protobuf.Timestamp created_date = 7;
+    optional google.protobuf.Timestamp edited_date = 8;
+    optional UserShort created_by = 9;
+    repeated UserShort assigned_to = 10;
+    repeated FileInfo files = 11;
+    repeated BoardId boards = 12;
+}

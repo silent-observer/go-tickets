@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option go_package = "github.com/silent-observer/go-tickets/proto/tickets";
+
+package tickets;
+
+enum BoardSort {
+    BS_ID_ASC = 0;
+    BS_ID_DESC = 1;
+    BS_TITLE_ASC = 2;
+    BS_TITLE_DESC = 3;
+    BS_CREATED_DATE_ASC = 4;
+    BS_CREATED_DATE_DESC = 5;
+    BS_EDITED_DATE_ASC = 6;
+    BS_EDITED_DATE_DESC = 7;
+    BS_CREATED_BY_ASC = 8;
+    BS_CREATED_BY_DESC = 9;
+    BS_ASSIGNED_TO_ASC = 10;
+    BS_ASSIGNED_TO_DESC = 11;
+    BS_STATUS_ASC = 12;
+    BS_STATUS_DESC = 13;
+}

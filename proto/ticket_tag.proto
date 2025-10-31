@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package = "github.com/silent-observer/go-tickets/proto/tickets";
+
+package tickets;
+
+message TicketTag {
+    string tag = 1;
+    optional string value = 2;
+}

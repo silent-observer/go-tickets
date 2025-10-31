@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "github.com/silent-observer/go-tickets/proto/tickets";
+
+package tickets;
+
+message FileInfo {
+    string id = 1;
+    string name = 2;
+    string type = 3;
+}

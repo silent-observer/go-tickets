@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/silent-observer/go-tickets/proto/tickets";
+
+package tickets;
+
+import "ticket_full_id.proto";
+import "comment_full_id.proto";
+import "comment.proto";
+
+service CommentService {
+    rpc Get(CommentFullId) returns (Comment);
+    rpc GetAll(TicketFullId) returns (stream Comment);
+    rpc GetUpdates(TicketFullId) returns (stream Comment);
+    rpc Create(Comment) returns (CommentFullId);
+    rpc Edit(Comment) returns (Comment);
+}

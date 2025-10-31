@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "github.com/silent-observer/go-tickets/proto/tickets";
+
+package tickets;
+
+import "board_full_id.proto";
+import "board.proto";
+import "board_filter.proto";
+import "ticket_short.proto";
+
+service BoardService {
+    rpc GetAll(BoardFullId) returns (Board);
+    rpc GetAllUpdates(BoardFullId) returns (stream TicketShort);
+    rpc Get(BoardFilter) returns (Board);
+    rpc GetUpdates(BoardFilter) returns (stream TicketShort);
+    rpc Create(Board) returns (BoardFullId);
+}

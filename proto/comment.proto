@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option go_package = "github.com/silent-observer/go-tickets/proto/tickets";
+
+package tickets;
+
+import "google/protobuf/timestamp.proto";
+
+import "comment_full_id.proto";
+import "comment_id.proto";
+import "file_info.proto";
+import "user_short.proto";
+
+message Comment {
+    optional CommentFullId id = 1;
+    optional string content = 2;
+    optional UserShort created_by = 3;
+    optional google.protobuf.Timestamp created_date = 4;
+    optional google.protobuf.Timestamp edited_date = 5;
+    optional CommentId parent = 6;
+    repeated FileInfo files = 7;
+}
