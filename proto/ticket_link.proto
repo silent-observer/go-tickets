@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-option go_package = "github.com/silent-observer/go-tickets/proto/tickets";
+option go_package = "github.com/silent-observer/go-tickets/proto";
 
-package tickets;
+package proto;
 
 import "ticket_id.proto";
 import "ticket_link_type.proto";
