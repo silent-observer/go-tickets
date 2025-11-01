@@ -5,5 +5,5 @@ option go_package = "github.com/silent-observer/go-tickets/proto";
 package proto;
 
 message TicketId {
-    uint64 id = 1;
+    uint32 id = 1;
 }

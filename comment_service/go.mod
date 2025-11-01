@@ -2,10 +2,8 @@ module github.com/silent-observer/go-tickets/comment_service
 
 go 1.25.3
 
-replace github.com/silent-observer/go-tickets/proto => ../proto
-
 require (
-	github.com/silent-observer/go-tickets/proto v0.0.0-00010101000000-000000000000
+	github.com/silent-observer/go-tickets/proto v0.0.0-20251031210000-a8ade1ccd66d
 	google.golang.org/grpc v1.76.0
 )
 
