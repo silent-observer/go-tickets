@@ -14,6 +14,8 @@ import (
 	pb "github.com/silent-observer/go-tickets/proto"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
+	"google.golang.org/grpc/health"
+	healthgrpc "google.golang.org/grpc/health/grpc_health_v1"
 	"google.golang.org/grpc/status"
 
 	"github.com/uptrace/bun"
@@ -100,6 +102,8 @@ func main() {
 	db.AddQueryHook(bundebug.NewQueryHook(bundebug.WithVerbose(true)))
 
 	s := grpc.NewServer()
+	healthcheck := health.NewServer()
+	healthgrpc.RegisterHealthServer(s, healthcheck)
 	pb.RegisterBoardServiceServer(s, &server{db: db})
 	fmt.Printf("server listening at %v", lis.Addr())
 	if err := s.Serve(lis); err != nil {

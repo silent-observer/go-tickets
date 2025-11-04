@@ -3,6 +3,7 @@ module github.com/silent-observer/go-tickets/board_service
 go 1.25.3
 
 require (
+	github.com/silent-observer/go-tickets/pgdb v0.0.0-20251101210000-56f4050692d5
 	github.com/silent-observer/go-tickets/proto v0.0.0-20251031210000-a8ade1ccd66d
 	github.com/uptrace/bun v1.2.15
 	github.com/uptrace/bun/dialect/pgdialect v1.2.15

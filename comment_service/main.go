@@ -9,6 +9,8 @@ import (
 
 	pb "github.com/silent-observer/go-tickets/proto"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/health"
+	healthgrpc "google.golang.org/grpc/health/grpc_health_v1"
 )
 
 var (
@@ -31,6 +33,8 @@ func main() {
 		log.Fatalf("failed to listen: %v", err)
 	}
 	s := grpc.NewServer()
+	healthcheck := health.NewServer()
+	healthgrpc.RegisterHealthServer(s, healthcheck)
 	pb.RegisterCommentServiceServer(s, &server{})
 	fmt.Printf("server listening at %v", lis.Addr())
 	if err := s.Serve(lis); err != nil {

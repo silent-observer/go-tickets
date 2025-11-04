@@ -22,6 +22,8 @@ github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZb
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/puzpuzpuz/xsync/v3 v3.5.1 h1:GJYJZwO6IdxN/IKbneznS6yPkVC+c3zyY/j19c++5Fg=
 github.com/puzpuzpuz/xsync/v3 v3.5.1/go.mod h1:VjzYrABPabuM4KyBh1Ftq6u8nhwY5tBPKP9jpmh0nnA=
+github.com/silent-observer/go-tickets/pgdb v0.0.0-20251101210000-56f4050692d5 h1:99DVEfJo1LXBC/x0whAvhNI/TzPtiPOHqnE9rKzxgcA=
+github.com/silent-observer/go-tickets/pgdb v0.0.0-20251101210000-56f4050692d5/go.mod h1:6EMJlkCugk9GnGTLygKbbydI8VP1gKsasS8KOWFM6/4=
 github.com/silent-observer/go-tickets/proto v0.0.0-20251031210000-a8ade1ccd66d h1:rnck+Gn1k36lphYZ3E/TtD5WfcLwHPxdepVBFsYIzi8=
 github.com/silent-observer/go-tickets/proto v0.0.0-20251031210000-a8ade1ccd66d/go.mod h1:y38kegirYphQEC6GdOL2d9rS2vGPKQ7pH0cl3AqDWJM=
 github.com/stretchr/testify v1.10.0 h1:Xv5erBjTwe/5IxqUQTdXv5kgmIvbHo3QQyRwhJsOfJA=
